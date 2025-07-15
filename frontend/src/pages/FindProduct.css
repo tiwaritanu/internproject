@@ -1,0 +1,501 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Header */
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 5%;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.homepage-header h1 {
+  color: #06b6d4;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.homepage-header nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.homepage-header nav a {
+  color: #111827;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.homepage-header nav a:hover {
+  color: #06b6d4;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.auth-buttons button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.login {
+  background-color: transparent;
+  border: 1.2px solid gray;
+  color: black;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.signup {
+  background-color: #06b6d4;
+  color: white;
+  border: 1px solid #06b6d4;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Main content */
+.homepage-main {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.homepage-main h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.homepage-main p {
+  font-size: 16px;
+  color: #4b5563;
+  margin: 10px 0;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 10px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px 0 0 8px;
+  width: 300px;
+  max-width: 80%;
+  flex: 1;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #06b6d4;
+  border: none;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Suggestion Box */
+.suggestion-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  z-index: 99;
+  list-style: none;
+  padding: 0;
+}
+
+.suggestion-box li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-box li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Popular Searches */
+.popular-searches {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* Search History */
+.search-history {
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.history-tags span {
+  display: inline-block;
+  background: #f1f1f1;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.history-tags span:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Categories */
+.categories {
+  margin-top: 50px;
+}
+
+.categories h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  padding: 0 10%;
+}
+
+.category-grid.expanded {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.category-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  background-color: #e0f0ff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.category-card .circle {
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* See all button */
+.see-all-btn {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* No Results */
+.no-results {
+  margin-top: 1rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Browse Button */
+.browse-button {
+  margin-top: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.browse-button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.brand {
+  color: #00bcd4;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #00bcd4;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .homepage-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+  }
+
+  .homepage-header nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+
+  }
+
+   .homepage-header nav .link {
+    display: none;
+
+  }
+
+  .auth-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    
+  }
+  .login{
+    padding-left:100px ;
+    padding-right: 100px ;
+  }
+  .signup{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 90%;
+  }
+
+ 
+  .search-bar input{
+    width: 400px;
+    display: flex;
+    border-radius: 8px;
+    margin-left: 30px;
+  }
+  .search-bar button {
+    width: 100px;
+    display: block;
+    border-radius: 8px;
+    margin-left: 160px;
+    
+}
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .category-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .category-grid > * {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Fetched Products Section */
+.fetched-products {
+  margin-top: 40px;
+  padding: 0 10%;
+}
+
+.fetched-products h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.product-details h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 4px;
+  color: #111827;
+}
+
+.product-details p.brand {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.product-details p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.product-details p span {
+  font-weight: 600;
+}
+
+.status-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6f6ea;
+  color: #15803d;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .product-card img {
+    height: 140px;
+  }
+}
