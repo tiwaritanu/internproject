@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.fontFamily": "Fira Code, JetBrains Mono, Consolas, 'Courier New', monospace",
+"terminal.integrated.fontSize": 14,
+"terminal.integrated.fontWeight": "normal",
+"terminal.integrated.cursorStyle": "block"
+
+}
